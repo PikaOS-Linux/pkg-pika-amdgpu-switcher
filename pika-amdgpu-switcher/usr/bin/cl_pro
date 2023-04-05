@@ -2,19 +2,8 @@
 
 # This script applies amdocl-pro OpenGL driver for specific application.
 # You can test the difference with clinfo utility.
-# 
 
-
-cl_pro() {
-    export LD_LIBRARY_PATH="/opt/amdgpu/lib/x86_64-linux-gnu:/opt/amdgpu/i386-linux-gnu:/opt/amdgpu-pro/lib/x86_64-linux-gnu:/opt/amdgpu-pro/lib/i386-linux-gnu:${LD_LIBRARY_PATH}"
-}
-
-if [[ $(basename $0) == cl_pro ]]; then
-    cl_pro
-else
-    echo "Unknown function"
-    exit 1
-fi
+export LD_LIBRARY_PATH="/opt/amdgpu/lib/x86_64-linux-gnu:/opt/amdgpu/lib/i386-linux-gnu:/opt/amdgpu-pro/pika/opencl/x86_64-linux-gnu:/opt/amdgpu-pro/pika/opencl/i386-linux-gnu:${LD_LIBRARY_PATH}"
 
 # applied variables, now execute the rest of the command
 "$@"
