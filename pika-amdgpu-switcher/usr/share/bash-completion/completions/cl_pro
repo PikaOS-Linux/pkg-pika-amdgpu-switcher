@@ -1,1 +1,0 @@
-_have cl_pro && complete -F _command cl_pro
