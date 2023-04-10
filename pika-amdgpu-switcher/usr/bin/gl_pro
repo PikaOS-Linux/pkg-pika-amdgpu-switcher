@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+# This script applies amdogl-pro/zink/mesa OpenGL driver for specific application.
+# You can test the difference (GL_VENDOR, GL_RENDERER, GL_VERSION) with glmark2 utility.
+# 
+# Usage:
+#   <gl_mesa|gl_zink|gl_pro> <app and its parameters>
+# For example:
+#   $ gl_pro davinci-resolve
+# This will start davinci resolve with AMDGPU PRO OpenGL driver.
+
+export LD_LIBRARY_PATH="/opt/amdgpu/lib/x86_64-linux-gnu:/opt/amdgpu/lib/i386-linux-gnu:/opt/amdgpu-pro/pika/opengl/x86_64-linux-gnu:/opt/amdgpu-pro/pika/opengl/i386-linux-gnu:${LD_LIBRARY_PATH}"
+
+# applied variables, now execute the rest of the command
+"$@"
