@@ -14,7 +14,7 @@
 
 export DISABLE_LAYER_AMD_SWITCHABLE_GRAPHICS_1=1
 export LD_LIBRARY_PATH="/opt/amdgpu/lib/x86_64-linux-gnu:/opt/amdgpu/lib/i386-linux-gnu:${LD_LIBRARY_PATH}"
-export VK_ICD_FILENAMES="/etc/vulkan/icd.d/amd_icd32.json:/etc/vulkan/icd.d/amd_icd64.json"
+export VK_ICD_FILENAMES="/opt/amdgpu/share/vulkan/icd.d/amd_icd32.json:/opt/amdgpu/share/vulkan/icd.d/amd_icd64.json"
 
 # applied variables, now execute the rest of the command
 "$@"
